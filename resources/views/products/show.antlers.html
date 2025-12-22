@@ -1,0 +1,44 @@
+
+  <section class="relative lg:col-span-10 lg:col-start-2">
+
+    {{ partial:components/headings/h1 class="font-spezia-medium font-medium text-center xl:text-left mb-12 border-t border-t-black pt-12" }}
+      {{ title }}
+    {{ /partial:components/headings/h1 }}
+
+    {{ blocks }}
+
+      {{ if type == "product_information" }}
+
+        {{ if !private || logged_in }}
+
+          <div 
+            class="md:grid md:grid-cols-12 md:gap-x-20 pb-20 md:pb-40 mb-20 md:mb-40 border-b border-b-black last:mb-0"
+            data-product>
+
+            {{ if image }}
+              {{ partial:components/media/image 
+                :image="image" 
+                :sizes="['2xl', 'xl', 'lg']"
+                wrapperClass="md:col-span-6 mb-20 md:mb-0" 
+                class="w-full h-auto" }}
+            {{ /if }}
+
+            {{ if description }}
+              <div class="md:col-span-6">
+                {{ description }}
+              </div>
+            {{ /if }}
+
+          </div>
+
+        {{ /if }}
+
+      {{ /if }}
+
+    {{ /blocks }}
+
+      {{ partial:products/browse }}
+
+  </section>
+
+

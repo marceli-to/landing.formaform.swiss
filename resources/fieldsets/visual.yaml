@@ -1,0 +1,12 @@
+title: Visual
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild
+      instructions: 'Optimales Format ist 16:10'
+      localizable: false
+      instructions_position: below

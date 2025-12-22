@@ -1,0 +1,45 @@
+
+{{ if type == 'editor' }}
+  {{ partial:components/editor }}
+{{ /if }}
+
+{{ if type == 'visual' }}
+  {{ partial:components/media/visual }}
+{{ /if }}
+
+{{ if type == 'teasers' }}
+  {{ partial:components/teaser/wrapper }}
+{{ /if }}
+
+{{ if type == 'downloads' }}
+  {{ partial:components/media/downloads/wrapper }}
+{{ /if }}
+
+{{ if type == 'image_text_hero' }}
+  {{ partial:components/image_text_hero }}
+{{ /if }}
+
+{{ if type == 'image_text' }}
+  {{ partial:components/image_text }}
+{{ /if }}
+
+{{ if type == 'image_gallery' }}
+  {{ partial:components/image_gallery }}
+{{ /if }}
+
+{{ if type == 'team_member' }}
+  {{ partial:components/team_member }}
+{{ /if }}
+
+{{ if type == 'product_listing' }}
+  {{ partial:products/list }}
+{{ /if }}
+
+{{ if type == 'text_two_cols' }}
+  {{ partial:components/text_two_cols }}
+{{ /if }}
+
+
+
+
+  

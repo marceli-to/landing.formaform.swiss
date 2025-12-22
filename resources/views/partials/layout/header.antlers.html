@@ -1,0 +1,18 @@
+<header class="sticky top-0 left-0 z-10 w-full pt-12">
+  <div class="bg-white h-[var(--header-height-sm)] lg:h-[var(--header-height-lg)] ">
+    {{ partial:layout/container/inner class="h-[inherit] flex flex-row-reverse lg:flex-row items-center justify-between lg:grid lg:grid-cols-12 lg:gap-x-20" }}
+
+      <div class="lg:col-span-12 flex justify-center">
+        <a
+          href="/"
+          aria-label="Startseite"
+          class="block w-210 lg:w-[320px] h-auto">
+          {{ partial:icons/logo class="w-full h-auto" }}
+        </a>
+      </div>
+      
+    {{ /partial:layout/container/inner }}
+  </div>
+</header>
+{{ partial:menu/wrapper }}
+{{ partial:auth/wrapper }}

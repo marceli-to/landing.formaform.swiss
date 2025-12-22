@@ -1,0 +1,12 @@
+<a 
+  href="{{ link }}"
+  aria-label="{{ title }}"
+  class="md:col-span-6 group">
+
+  {{ partial:components/teaser/heading :title="title" class="group-hover:text-olverra transition-colors" }}
+
+  {{ partial:components/media/image 
+    wrapperClass="block aspect-[3/4] overflow-hidden" 
+    class="aspect-[3/4] w-full h-full object-cover group-hover:opacity-90 transition-opacity" }}
+
+</a>

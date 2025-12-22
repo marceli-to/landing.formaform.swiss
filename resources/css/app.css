@@ -1,0 +1,77 @@
+@import "typo/webfonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { 
+  @apply !hidden;
+}
+
+:root {
+  --header-height-sm: 3.75rem; /* 60 px */
+  --header-height-lg: 5.5rem; /* 88 px */
+  --max-width-container: 90rem; /* 1440px 90rem, was: 105rem, 1680 px */
+}
+
+main {
+  @apply flex-1;
+}
+
+p:not(:last-child),
+ul:not(:last-child) {
+  @apply mb-8 lg:mb-12
+}
+
+/* p:has(+ ul) {
+  @apply !mb-0
+} */
+
+article h2 {
+  @apply font-spezia-medium font-medium lg:text-md mb-22 lg:mb-28
+}
+
+article ul {
+  @apply list-none
+}
+
+article ul li {
+  @apply pl-30 relative
+}
+
+article ul li::before {
+  @apply content-['—'] absolute left-0 top-0
+}
+
+article ul li p {
+  @apply inline;
+}
+
+strong {
+  @apply font-spezia-medium font-medium;
+}
+
+/* Product pages */
+[data-product] p:not(:last-child) {
+  @apply mb-15
+}
+
+[data-product] p:has(+ ul) {
+  @apply !mb-0
+}
+
+[data-product] ul {
+  @apply list-none
+}
+
+[data-product] ul li {
+  @apply pl-30 relative
+}
+
+[data-product] ul li::before {
+  @apply content-['—'] absolute left-0 top-0
+}
+
+[data-product] ul li p {
+  @apply inline;
+}
